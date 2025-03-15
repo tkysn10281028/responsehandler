@@ -9,7 +9,6 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
-		<!-- Jakarta Servlet API (HttpServletResponse を使用するために必要) -->
 		<dependency>
 			<groupId>jakarta.servlet</groupId>
 			<artifactId>jakarta.servlet-api</artifactId>
