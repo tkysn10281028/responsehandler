@@ -17,6 +17,13 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/tkysn10281028/responsehandler</url>
+		</repository>
+	</distributionManagement>
 	<build>
 		<plugins>
 			<plugin>
