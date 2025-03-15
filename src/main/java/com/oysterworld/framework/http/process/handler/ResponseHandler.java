@@ -17,34 +17,28 @@ public class ResponseHandler {
         this.writer = writer;
     }
 
-    public ResponseHandler run(Runnable func) {
+    public void run(Runnable func) {
         runInner(func);
-        return this;
     }
 
-    public <A> ResponseHandler run(Consumer<A> func, A arg) {
+    public <A> void run(Consumer<A> func, A arg) {
         runInner(func, arg);
-        return this;
     }
 
-    public <A, B> ResponseHandler run(BiConsumer<A, B> func, A arg1, B arg2) {
+    public <A, B> void run(BiConsumer<A, B> func, A arg1, B arg2) {
         runInner(func, arg1, arg2);
-        return this;
     }
 
-    public <A> ResponseHandler run(Supplier<A> func) {
+    public <A> void run(Supplier<A> func) {
         runInner(func);
-        return this;
     }
 
-    public <A, B> ResponseHandler run(Function<A, B> func, A arg) {
+    public <A, B> void run(Function<A, B> func, A arg) {
         runInner(func, arg);
-        return this;
     }
 
-    public <A, B, C> ResponseHandler run(BiFunction<A, B, C> func, A arg1, B arg2) {
+    public <A, B, C> void run(BiFunction<A, B, C> func, A arg1, B arg2) {
         runInner(func, arg1, arg2);
-        return this;
     }
 
     private void runInner(Object func, Object... args) {
