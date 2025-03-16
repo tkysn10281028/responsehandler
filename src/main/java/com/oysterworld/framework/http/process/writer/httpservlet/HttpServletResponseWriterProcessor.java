@@ -27,7 +27,7 @@ public class HttpServletResponseWriterProcessor {
         if (result instanceof ResponseHandlerException) {
             var e = (ResponseHandlerException) result;
             writeResponse(response, e.getStatusCode(),
-                    new ResponseObject(e.toString() + " message:" + e.getMessage(), "-> failure."));
+                    new ResponseObject(e.toString(), " message:" + e.getMessage() + "-> failure."));
             return;
         }
         writeResponse(response, 500,
